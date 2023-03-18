@@ -14,25 +14,29 @@ public class LoginStepDefinition {
     public void user_is_on_the_login_page() {
         Driver.getDriver().get(ConfigurationReader.getProperty("loginUrl"));
 
-        loginpage.userName.sendKeys(ConfigurationReader.getProperty("loginUsername"));
-        loginpage.password.sendKeys(ConfigurationReader.getProperty("loginPw"));
-        loginpage.loginButton.click();
 
 
     }
 
     @When("user enter  username {string}")
     public void user_enter_username(String string) {
+        loginpage.userName.sendKeys(string);
+
 
     }
 
     @When("user enters Password {string}")
     public void user_enters_password(String string) {
+        loginpage.password.sendKeys(string);
+
 
     }
 
     @Then("user should see the dashboard")
     public void user_should_see_the_dashboard() {
+        loginpage.loginButton.click();
+
+
 
     }
 }
