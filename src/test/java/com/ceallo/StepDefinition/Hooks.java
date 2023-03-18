@@ -10,21 +10,15 @@ import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 
 public class Hooks {
-    LoginPage loginpage= new LoginPage();
+
     @Before
     public void setUp() {
         System.out.println("====setting up browser using cucumber @before");
 
-        Driver.getDriver().get(ConfigurationReader.getProperty("loginUrl"));
-
-        loginpage.userName.sendKeys(ConfigurationReader.getProperty("loginUsername"));
-        loginpage.password.sendKeys(ConfigurationReader.getProperty("loginPw"));
-        loginpage.loginButton.click();
-
 
     }
 
-//    @After
+    //    @After
     public void teardownScenario(Scenario scenario) {
 
 //        System.out.println("=======closing browser");
