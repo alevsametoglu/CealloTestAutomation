@@ -15,7 +15,7 @@ import org.junit.runner.RunWith;
         features = "src/test/resources/Features",
         glue = "com/ceallo/StepDefinition",
         dryRun = false,
-        tags = ""
+        tags = "@wip"
 
 )
 
