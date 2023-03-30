@@ -484,4 +484,13 @@ public class BrowserUtils {
         new WebDriverWait(Driver.getDriver(), time).until(ExpectedConditions.presenceOfElementLocated(by));
     }
 
+    //static wait - Thread.sleep()
+    public static void wait(int seconds) {
+        try {
+            Thread.sleep(seconds * 1000L);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
 }
